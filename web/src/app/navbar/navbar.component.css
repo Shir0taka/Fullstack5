@@ -1,0 +1,61 @@
+.nav-back {
+    background-color: #00008B;
+    font-family: 'Nunito', sans-serif;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-inline-start: 20px;
+    font-size: 24px;
+    color: aqua;
+}
+
+.nav-home > a {
+    color: aqua;
+    font-size: 32px;
+    margin-inline-end: 30px;
+    text-decoration: none;
+}
+
+.nav-link > a {
+    color: #00BFFF;
+    padding: 0 25px;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav-link > a:hover {
+    background-color: #00BFFF;
+    color: #00008B;
+    animation-name: a-hover;
+    animation-duration: 0.15s;
+    border-radius: 10px;
+}
+
+@keyframes a-hover {
+    from {
+        color: #00BFFF;
+    }
+    to {
+        background-color: #00BFFF;
+        color: #00008B;
+    }
+}
+
+.nav-link > a:not(:hover) {
+    color: #00BFFF;
+    animation-name: not-hover;
+    animation-duration: 0.15s;
+    border-radius: 10px;
+}
+
+@keyframes not-hover {
+    from {
+        background-color: #00BFFF;
+        color: #00008B;
+    }
+    to {
+        color: #00BFFF;
+    }
+}

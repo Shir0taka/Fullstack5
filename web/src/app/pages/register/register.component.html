@@ -1,0 +1,22 @@
+<body>
+    <div class="flex-center position-ref full-height">
+        <div class="content">
+            <div class="title m-b-md">
+                Register
+            </div>
+
+            <div class="border">
+                Name<br>
+                <input [(ngModel)]="userName" class="input" type="text"><br>
+                E-mail<br>
+                <input [(ngModel)]="userMail" class="input" type="text"><br>
+                Password<br>
+                <input [(ngModel)]="userPassword" class="input" type="password"><br>
+            </div>
+            <button class="button" (click)="regNewUser()">Register</button>
+            <div class="response">
+                <p>{{responseRes}}</p>                
+            </div>
+        </div>
+    </div>
+</body>

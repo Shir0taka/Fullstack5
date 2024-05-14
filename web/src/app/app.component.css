@@ -1,0 +1,38 @@
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: block;
+    position: fixed;
+    top: 0;
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.body {
+    background-color: #87CEFA;
+    color: #00008B;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    flex-grow: 0;
+    flex-shrink: 0;
+    overflow-y: auto;
+}
+
+.footer {
+    background-color: #00008B;
+    font-family: 'Nunito', sans-serif;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-inline-start: 20px;
+    font-size: 24px;
+    color: aqua;
+    vertical-align: middle;
+    text-align: center;
+}

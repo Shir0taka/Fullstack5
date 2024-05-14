@@ -1,0 +1,24 @@
+<body>
+    <div class="flex-center position-ref full-height">
+        <div class="content">
+            <div class="title m-b-md">
+                Add Book
+            </div>
+
+            <div class="border">
+                Name<br>
+                <input [(ngModel)]="bookName" class="input" type="text"><br>
+                Author<br>
+                <input [(ngModel)]="bookAuthor" class="input" type="text"><br>
+                Pages<br>
+                <input [(ngModel)]="bookPages" class="input-num" type="number"><br>
+                Price<br>
+                <input [(ngModel)]="bookPrice" class="input-num" type="number"><br>
+            </div>
+            <button class="button" (click)="addNewBook()">Add</button>
+            <div class="response">
+                <p>{{responseRes}}</p>                
+            </div>
+        </div>
+    </div>
+</body>
