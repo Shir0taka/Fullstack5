@@ -39,6 +39,34 @@ class BookController extends Controller
         }
     }
 
+    public function view_book(Request $request)
+    {
+        try {
+            $filters = $request->all();
+
+            $book = Book::where('author', $filters['author'])
+            ->orderBy('name')
+            ->get();
+
+            sendBooks('books.json', 
+                json_encode($book)
+            );
+
+            return response()->json([
+                'message' => 'Books found',
+                'book' => $book,
+                'status' => 'success',
+            ]);
+        } catch (\Exception $e) {
+            return response()->json([
+                'message' => 'Books not found',
+                'book' => $book,
+                'status' => 'fail',
+                'error' => $e->getMessage(),
+            ]);
+        }
+    }
+
     public function update(Request $request, $id)
     {
         $book = \App\Models\Book::find($id);

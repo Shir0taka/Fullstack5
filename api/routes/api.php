@@ -23,3 +23,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('/store-book', [BookController::class, 'store_book']);
 Route::post('/reg-user', [UserController::class, 'reg_user']);
 Route::post('/auth-user', [UserController::class, 'auth_user']);
+Route::get('/books', [BookController::class, 'view_book']);
